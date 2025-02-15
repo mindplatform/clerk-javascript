@@ -40,6 +40,7 @@ export const ObjectType = {
   TestingToken: 'testing_token',
   Role: 'role',
   Permission: 'permission',
+  OAuthApplication: 'oauth_application',
 } as const;
 
 export type ObjectType = (typeof ObjectType)[keyof typeof ObjectType];
@@ -468,4 +469,24 @@ export interface SamlAccountConnectionJSON extends ClerkResourceJSON {
   disable_additional_identifications: boolean;
   created_at: number;
   updated_at: number;
+}
+
+export interface OAuthApplicationJSON {
+  id: string;
+  object: 'oauth_application';
+  instance_id: string;
+  name: string;
+  client_id: string;
+  public: boolean;
+  scopes: string;
+  redirect_uris: string[];
+  callback_url: string | null;
+  authorize_url: string;
+  token_fetch_url: string;
+  user_info_url: string;
+  discovery_url: string;
+  token_introspection_url: string;
+  created_at: number;
+  updated_at: number;
+  client_secret?: string;
 }

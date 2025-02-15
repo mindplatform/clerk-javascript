@@ -84,6 +84,7 @@ export type {
   DeletedObjectJSON,
   PaginatedResponseJSON,
   TestingTokenJSON,
+  OAuthApplicationJSON,
 } from './api/resources/JSON';
 
 /**
@@ -110,6 +111,7 @@ export type {
   Token,
   User,
   TestingToken,
+  OAuthApplication,
 } from './api/resources';
 
 /**

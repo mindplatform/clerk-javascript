@@ -51,3 +51,4 @@ export type {
 } from './Webhooks';
 
 export * from './OrganizationDomain';
+export * from './OAuthApplication';

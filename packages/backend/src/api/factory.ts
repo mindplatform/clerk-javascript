@@ -5,6 +5,7 @@ import {
   DomainAPI,
   EmailAddressAPI,
   InvitationAPI,
+  OAuthApplicationAPI,
   OrganizationAPI,
   PhoneNumberAPI,
   RedirectUrlAPI,
@@ -40,5 +41,6 @@ export function createBackendApiClient(options: CreateBackendApiOptions) {
     domains: new DomainAPI(request),
     samlConnections: new SamlConnectionAPI(request),
     testingTokens: new TestingTokenAPI(request),
+    oauthApplications: new OAuthApplicationAPI(request),
   };
 }
